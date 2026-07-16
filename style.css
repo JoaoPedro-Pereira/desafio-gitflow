@@ -217,7 +217,26 @@ body {
     background-color: var(--bg-main);
 }
 
-.log-item.error { border-left: 4px solid var(--accent-red); }
-.log-item.info {border-left: 4px solid var(--accent-green); }
-.timestamp { color: var(--text-muted); }
-.service { color: var(--accent-blue); }
+.log-item.error { 
+    border-left: 4px solid var(--accent-red); 
+}
+.log-item.info {
+    border-left: 4px solid var(--accent-green); 
+}
+.timestamp { 
+    color: var(--text-muted); 
+}
+.service { 
+    color: var(--accent-blue); 
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-main);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+}
