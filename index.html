@@ -1,13 +1,89 @@
-<!DOCTYPE html>​
-<html lang="pt-BR">​
-<head>​
-<meta charset="UTF-8">​
-<meta name="viewport" content="width=device-width,
-initial-scale=1.0">​
-<title>O11y Dashboard</title>​
-<link rel="stylesheet" href="style.css">​
-</head>​
-<body>​<div class="app-layout">​
-</div>​
-</body>​
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O11y Dashboard - v1.0.0</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="brand"> 
+                <span class="brand-icon">⚡</span> 
+                <h1>O11y-Dash</h1> 
+                    <nav class="menu">​
+                        <a href="#" class="active">Visão Geral</a>​
+                        <a href="#">Métricas</a>​
+                        <a href="#">Logs de Rede</a>​
+                        <a href="#">Alertas</a>​
+                        <a href="#">Configurações</a>​
+                    </nav>
+            </div>
+        </aside>
+        <header class="topbar">
+                <div class="search-box">​
+                    <input type="text" placeholder="Buscar métricas, nós ou logs...">​
+                </div>​
+                <div class="user-profile">​
+                    <div class="avatar">Admin</div>​
+                </div>
+        </header>
+        <main class="content-area">
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <h3>Uptime Servidores</h3>
+                    <div class="value">99.99%</div>
+                    <div class="trend positive">↑ 0.01%</div>
+                </div>
+                <div class="kpi-card">​
+                    <h3>Latência Média (p95)</h3>​
+                    <div class="value">42ms</div>​
+                    <div class="trend negative">↓ 5ms</div>​
+                </div>
+                <div class="kpi-card">
+                    <h3>Requisições / seg</h3>
+                    <div class="value">12,450</div>
+                    <div class="trend positive">↑ 1,200</div>
+                </div>
+                <div class="kpi-card">​
+                    <h3>Taxa de Erro (5xx)</h3>​
+                    <div class="value alert">0.15%</div>​
+                    <div class="trend danger">↑ 0.05%</div>​
+                </div>
+            </div>
+            <div class="chart-section">
+                <h3>Tráfego de Rede vs CPU</h3>
+                <div class="chart-mock">
+                    <div class="bar" style="height: 60%"></div>
+                    <div class="bar" style="height: 80%"></div>
+                    <div class="bar" style="height: 40%"></div>
+                    <div class="bar" style="height: 90%"></div>
+                    <div class="bar" style="height: 50%"></div>
+                    <div class="bar" style="height: 70%"></div>
+                    <div class="bar" style="height: 30%"></div>
+                </div>
+                <div class="logs-section">​
+                    <h3>Logs de Eventos Recentes</h3>​
+                    <div class="log-list">​
+                        <div class="log-item error">​
+                            <span class="timestamp">10:45:21</span>​
+                            <span class="service">[auth-service]</span>​
+                            <span class="message">Connection timeout to database</span>​
+                        </div>​
+                        <div class="log-item info">​
+                            <span class="timestamp">10:45:19</span>​
+                            <span class="service">[payment-api]</span>​
+                            <span class="message">Healthcheck passed</span>​
+                        </div>​
+                    </div>​
+                </div>​
+            </div>
+            <div class="dashboard-header"> 
+                <h2>Visão Geral do Sistema</h2> 
+                <span class="status-badge">🟢 Sistema Operacional</span>
+            </div> 
+        </main> 
+    </div>
+</body>
 </html>

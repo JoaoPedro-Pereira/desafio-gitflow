@@ -1,0 +1,37 @@
+name: Pipeline Estática
+on:
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  lint-html:
+    name: 1. Validar HTML
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v5
+
+      - name: Instalar HTMLHint globalmente
+        run: npm install -g htmlhint
+
+      - name: Validar index.html
+        run: htmlhint index.html
+
+  lint-css:
+    name: 2. Validar CSS
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v5
+
+      - name: Instalar Stylelint globalmente
+        run: npm install -g stylelint
+
+      - name: Criar arquivo de configuração temporário
+        # Cria um arquivo físico que o Stylelint espera encontrar na raiz do projeto
+        run: echo '{"rules":{"color-no-invalid-hex":true,"declaration-block-no-duplicate-properties":true,"block-no-empty":true}}' > .stylelintrc.json
+
+      - name: Validar style.css
+        run: stylelint style.css
