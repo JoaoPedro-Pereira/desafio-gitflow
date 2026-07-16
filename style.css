@@ -77,7 +77,6 @@ body {
     padding: 0 2rem;
 }
 
-
 .search-box input {
     background-color: var(--bg-main);
     border: 1px solid var(--border-color);
